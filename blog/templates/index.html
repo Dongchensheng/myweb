@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <div style="float:right;">
+        <a>嘿！{{user}}欢迎</a>
+        <a href="/logout/">退出</a> &nbsp;
+        <hr/>
+    </div>
+    {% for blog in blogs %}
+      <h2>{{blog.title}}</h2>
+      <p>{{blog.timestamp}}</p>
+      <p>{{blog.body}}</p>
+    {% endfor %}
+{% endblock %}
